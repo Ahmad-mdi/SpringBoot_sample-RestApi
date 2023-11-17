@@ -11,11 +11,8 @@ import javax.persistence.Id;
 @Entity //hibernate db
 @Getter
 @Setter
-public class Person {
+public class Person extends BaseEntity {
 
-    @Id//primaryKey
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//auto generate idNumber
-    private long id;
     private String name;
     private String lastname;
 
