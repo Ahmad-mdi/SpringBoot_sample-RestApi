@@ -45,4 +45,9 @@ public class PersonController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("{name}/{lastname}")
+    public ResponseEntity<Person> findByNameAndLastname(@PathVariable String name, @PathVariable String lastname) {
+        return ResponseEntity.ok(personServiceImpl.findByNameAndLastname(name, lastname));
+    }
+
 }

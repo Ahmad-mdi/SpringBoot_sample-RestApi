@@ -10,6 +10,5 @@ public interface PersonService{
     Person findById(Person person);
     List<Person> findAll();
     void deleteById(Person person);
-
-
+    Person findByNameAndLastname(String name, String lastname);
 }
